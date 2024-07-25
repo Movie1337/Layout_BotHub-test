@@ -1,10 +1,11 @@
-// src/components/MainContent.js
 import React from "react";
 import styled from "styled-components";
 
 const MainContainer = styled.div`
-  text-align: center;
-  margin: 50px 0;
+  text-align: left;
+  margin: auto 0;
+  width: 450px;
+  margin-right: auto;
 `;
 
 const Title = styled.h1`
@@ -13,7 +14,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 30px;
   color: #c0c0c0;
 `;
@@ -26,14 +27,19 @@ const StartButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #0056e0;
+  }
 `;
 
 const MainContent = () => (
   <MainContainer>
     <Title>ChatGPT: ваш умный помощник</Title>
     <Description>
-      Экспериментируйте с ChatGPT-4, Midjourney и Claude в одном месте.
-      Создавайте контент, общайтесь...
+      Эксперементируйте с ChatGPT-4, Midjourney и Claude в одном месте. Без VPN
+      и абонентской платы. Создавайте контент, обрабатывайте данные и получайте
+      ответы на вопросы через удобный интерфейс!
     </Description>
     <StartButton>Начать работу</StartButton>
   </MainContainer>

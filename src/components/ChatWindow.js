@@ -1,31 +1,50 @@
-// src/components/ChatWindow.js
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import { Configuration, OpenAIApi } from "openai-edge";
 
 const ChatContainer = styled.div`
-  width: 100%;
-  max-width: 600px;
-  background-color: #282c34;
-  border-radius: 8px;
+  width: 741px;
+  height: 592px;
+  background-color: #1e1e2f;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 85px;
 `;
 
 const MessagesContainer = styled.div`
-  height: 300px;
-  overflow-y: scroll;
+  flex-grow: 1;
+  overflow-y: auto;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+`;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 const Message = styled.div`
-  background-color: ${(props) => (props.isUser ? "#007bff" : "#444")};
+  background-color: ${(props) => (props.isUser ? "#007bff" : "#3e3e3e")};
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 5px 0;
   max-width: 70%;
   align-self: ${(props) => (props.isUser ? "flex-end" : "flex-start")};
+  animation: ${slideIn} 0.3s ease-out;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 `;
 
 const InputContainer = styled.div`
@@ -35,9 +54,12 @@ const InputContainer = styled.div`
 
 const Input = styled.input`
   flex: 1;
-  padding: 10px;
+  padding: 25px 20px;
   border: none;
   border-radius: 5px;
+  background-color: rgba(18, 24, 37, 1);
+  color: white;
+  outline: none;
 `;
 
 const SendButton = styled.button`
@@ -47,6 +69,11 @@ const SendButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #0056e0;
+  }
 `;
 
 const configuration = new Configuration({
@@ -84,9 +111,14 @@ const ChatWindow = () => {
     }
   };
 
+  useEffect(() => {
+    const messagesContainer = document.querySelector("#messagesContainer");
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }, [messages]);
+
   return (
     <ChatContainer>
-      <MessagesContainer>
+      <MessagesContainer id="messagesContainer">
         {messages.map((msg, index) => (
           <Message key={index} isUser={msg.role === "user"}>
             {msg.content}
@@ -97,7 +129,7 @@ const ChatWindow = () => {
         <Input
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
-          placeholder="Введите сообщение..."
+          placeholder="Спроси о чем нибудь..."
         />
         <SendButton onClick={handleSendMessage}>Отправить</SendButton>
       </InputContainer>
