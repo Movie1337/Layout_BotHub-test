@@ -1,42 +1,71 @@
 import React from "react";
 import styled from "styled-components";
+import imageAlri from "../images/alri.png";
+import iconTelegram from "../icons/Icon-telegram.png";
+import iconRobot from "../icons/icon-robot.png";
+import iconEmail from "../icons/icon-email.png";
+import iconBlog from "../icons/icon-blog.png";
+import iconHabr from "../icons/icon-habr.png";
 
 const FooterContainer = styled.footer`
   background-color: #1e1e2f;
   width: 100%;
   color: #c0c0c0;
-  padding: 65px 0;
 `;
 
 const Container = styled.div`
   width: 1290px;
   display: flex;
-
+  align-items: top;
+  justify-content: space-between;
   margin: 0 auto;
+  padding: 65px 0;
 `;
 
 const Section = styled.div`
-  min-width: 200px;
-  margin-right: auto;
+  min-width: 150px;
+  &:first-child {
+    margin-right: 190px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Logo = styled.div`
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  color: #fff;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 20px;
+
+  span {
+    background-color: #0066ff;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+    padding: 0 3px;
+    margin-right: 25px;
+  }
 `;
 
 const LegalInfo = styled.div`
   font-size: 14px;
-  color: #999;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  gap: 12px;
+`;
+
+const LegalItem = styled.div`
+  margin-bottom: 12px;
 `;
 
 const SectionTitle = styled.h4`
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(97, 109, 141, 1);
 `;
 
 const LinkList = styled.ul`
@@ -46,6 +75,17 @@ const LinkList = styled.ul`
 
 const LinkItem = styled.li`
   margin-bottom: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
 
   a {
     color: #c0c0c0;
@@ -61,13 +101,15 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <Section>
-          <Logo>Bot hub</Logo>
+          <Logo>
+            Bot<span>hub</span>
+          </Logo>
           <LegalInfo>
-            ООО «Ботхаб» ОГРН 1236300016259
-            <br />
-            @BotHub 2023
-            <br />
-            Пользовательское соглашение
+            <LegalItem>ООО «Ботхаб» ОГРН 1236300016259</LegalItem>
+            <LegalItem>@BotHub 2023</LegalItem>
+            <LegalItem>Пользовательское соглашение</LegalItem>
+
+            <img src={imageAlri} alt="Герб"></img>
           </LegalInfo>
         </Section>
         <Section>
@@ -84,6 +126,9 @@ const Footer = () => {
             </LinkItem>
             <LinkItem>
               <a href="#features">Наши возможности</a>
+            </LinkItem>
+            <LinkItem>
+              <a href="#features">Модели нейросетей</a>
             </LinkItem>
             <LinkItem>
               <a href="#about">О Нас</a>
@@ -111,13 +156,16 @@ const Footer = () => {
           <SectionTitle>Ссылки</SectionTitle>
           <LinkList>
             <LinkItem>
-              <a href="https://t.me/example">Сообщество в Telegram</a>
+              <img src={iconTelegram} alt="Иконка телеграм"></img>
+              <a href="#">Сообщество в Телеграм</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://t.me/bot">Telegram бот</a>
+              <img src={iconRobot} alt="Иконка бота"></img>
+              <a href="#">Телеграм бот</a>
             </LinkItem>
             <LinkItem>
-              <a href="mailto:email@bothub.chat">email@bothub.chat</a>
+              <img src={iconEmail} alt="Иконка почты"></img>
+              <a href="#">email@bothub.chat</a>
             </LinkItem>
           </LinkList>
         </Section>
@@ -125,12 +173,15 @@ const Footer = () => {
           <SectionTitle>Блог</SectionTitle>
           <LinkList>
             <LinkItem>
+              <img src={iconBlog} alt="Иконка блога"></img>
               <a href="#blog">Наш блог</a>
             </LinkItem>
             <LinkItem>
+              <img src={iconHabr} alt="Иконка habr"></img>
               <a href="#news">Habr</a>
             </LinkItem>
             <LinkItem>
+              <img src={iconTelegram} alt="Иконка телеграм"></img>
               <a href="#telegram">Телеграм</a>
             </LinkItem>
           </LinkList>

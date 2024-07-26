@@ -7,17 +7,15 @@ import Footer from "./components/Footer";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
-  font-family: Arial, sans-serif;
-  color: #ffffff;
-  background-color: #222b44;
-  min-height: 100vh;
+  background-color: #121117;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  overflow: hidden;
 `;
 
 const Container = styled.div`
+  position: relative;
   width: 1290px;
 `;
 

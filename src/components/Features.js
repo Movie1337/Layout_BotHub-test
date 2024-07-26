@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ImageBlock from "../images/img-block.png";
 
 const FeaturesContainer = styled.div`
   color: #ffffff;
@@ -21,13 +22,14 @@ const CardsContainer = styled.div`
 const Card = styled.div`
   background: linear-gradient(
     142.87deg,
-    #1c64f2 0%,
-    rgba(28, 100, 242, 0) 44.17%
+    rgba(28, 100, 242, 0.38) 0%,
+    rgba(18, 24, 37, 1) 50%
   );
+
   padding: 0 20px;
   border-radius: 12px;
-  width: 360px;
-  height: 220px;
+  width: 370px;
+  height: 260px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
@@ -149,7 +151,7 @@ const Features = () => {
         </Card>
       </CardsContainer>
       <ImageTextContainer>
-        <Image src="src/img/img-block.png" alt="AI image" />
+        <img src={ImageBlock} alt="Картинка AI"></img>
         <TextContainer>
           <ImageTitle>Генерация Изображений Через Midjourney </ImageTitle>
           <ImageDescription>

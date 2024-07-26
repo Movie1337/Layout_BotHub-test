@@ -5,13 +5,14 @@ import { Configuration, OpenAIApi } from "openai-edge";
 const ChatContainer = styled.div`
   width: 741px;
   height: 592px;
-  background-color: #1e1e2f;
+  background-color: rgba(18, 24, 37, 1);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   margin-bottom: 85px;
+  z-index: 1;
 `;
 
 const MessagesContainer = styled.div`
@@ -55,7 +56,7 @@ const InputContainer = styled.div`
 const Input = styled.input`
   flex: 1;
   padding: 25px 20px;
-  border: none;
+  border: 1px solid #1e1e2f;
   border-radius: 5px;
   background-color: rgba(18, 24, 37, 1);
   color: white;

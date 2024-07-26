@@ -1,14 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import BackgroundLights from "../images/bg-lights.png";
+import BackgroundGrid from "../images/bg-grid.png";
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  z-index: 0;
+`;
+
+const Background = styled.div`
+  position: absolute;
+  top: -135px;
+  left: -325px;
+  z-index: -1;
+`;
 
 const MainContainer = styled.div`
   text-align: left;
-  margin: auto 0;
+  margin-top: 135.5px;
   width: 450px;
   margin-right: auto;
+  z-index: 1;
 `;
 
 const Title = styled.h1`
+  color: #ffffff;
   font-size: 36px;
   margin-bottom: 20px;
 `;
@@ -42,6 +60,12 @@ const MainContent = () => (
       ответы на вопросы через удобный интерфейс!
     </Description>
     <StartButton>Начать работу</StartButton>
+    <Background>
+      <img src={BackgroundGrid} alt="Задний фон"></img>
+    </Background>
+    <BackgroundImage>
+      <img src={BackgroundLights} alt="Задний фон"></img>
+    </BackgroundImage>
   </MainContainer>
 );
 
