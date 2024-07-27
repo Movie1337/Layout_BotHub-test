@@ -17,10 +17,23 @@ const AppContainer = styled.div`
 const Container = styled.div`
   position: relative;
   width: 1290px;
+
+  @media (max-width: 834px) {
+    width: 754px;
+  }
+
+  @media (max-width: 375px) {
+    width: 343px;
+  }
 `;
 
 const MainContainer = styled.div`
   display: flex;
+  align-items: center;
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
 `;
 
 const App = () => {

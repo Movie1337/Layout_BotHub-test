@@ -20,15 +20,31 @@ const Container = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding: 65px 0;
+
+  @media (max-width: 834px) {
+    width: 754px;
+    flex-direction: column;
+    align-items: left;
+    padding: 56px 40px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 44px 16px;
+  }
+`;
+
+const SectionInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 `;
 
 const Section = styled.div`
-  min-width: 150px;
-  &:first-child {
-    margin-right: 190px;
-    display: flex;
-    flex-direction: column;
-  }
+  min-width: 196px;
 `;
 
 const Logo = styled.div`
@@ -112,80 +128,82 @@ const Footer = () => {
             <img src={imageAlri} alt="Герб"></img>
           </LegalInfo>
         </Section>
-        <Section>
-          <SectionTitle>Информация</SectionTitle>
-          <LinkList>
-            <LinkItem>
-              <a href="#main">Главная страница</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#tariffs">Тарифы</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#contacts">Контакты</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#features">Наши возможности</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#features">Модели нейросетей</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#about">О Нас</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#investors">Для инвесторов</a>
-            </LinkItem>
-          </LinkList>
-        </Section>
-        <Section>
-          <SectionTitle>Наши продукты</SectionTitle>
-          <LinkList>
-            <LinkItem>
-              <a href="#business">ChatGPT для бизнеса</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#aggregator">Агрегатор нейросетей</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#telegram">ChatGPT в Telegram</a>
-            </LinkItem>
-          </LinkList>
-        </Section>
-        <Section>
-          <SectionTitle>Ссылки</SectionTitle>
-          <LinkList>
-            <LinkItem>
-              <img src={iconTelegram} alt="Иконка телеграм"></img>
-              <a href="#">Сообщество в Телеграм</a>
-            </LinkItem>
-            <LinkItem>
-              <img src={iconRobot} alt="Иконка бота"></img>
-              <a href="#">Телеграм бот</a>
-            </LinkItem>
-            <LinkItem>
-              <img src={iconEmail} alt="Иконка почты"></img>
-              <a href="#">email@bothub.chat</a>
-            </LinkItem>
-          </LinkList>
-        </Section>
-        <Section>
-          <SectionTitle>Блог</SectionTitle>
-          <LinkList>
-            <LinkItem>
-              <img src={iconBlog} alt="Иконка блога"></img>
-              <a href="#blog">Наш блог</a>
-            </LinkItem>
-            <LinkItem>
-              <img src={iconHabr} alt="Иконка habr"></img>
-              <a href="#news">Habr</a>
-            </LinkItem>
-            <LinkItem>
-              <img src={iconTelegram} alt="Иконка телеграм"></img>
-              <a href="#telegram">Телеграм</a>
-            </LinkItem>
-          </LinkList>
-        </Section>
+        <SectionInfo>
+          <Section>
+            <SectionTitle>Информация</SectionTitle>
+            <LinkList>
+              <LinkItem>
+                <a href="#main">Главная страница</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#tariffs">Тарифы</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#contacts">Контакты</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#features">Наши возможности</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#models">Модели нейросетей</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#about">О Нас</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#investors">Для инвесторов</a>
+              </LinkItem>
+            </LinkList>
+          </Section>
+          <Section>
+            <SectionTitle>Наши продукты</SectionTitle>
+            <LinkList>
+              <LinkItem>
+                <a href="#business">ChatGPT для бизнеса</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#aggregator">Агрегатор нейросетей</a>
+              </LinkItem>
+              <LinkItem>
+                <a href="#telegram">ChatGPT в Telegram</a>
+              </LinkItem>
+            </LinkList>
+          </Section>
+          <Section>
+            <SectionTitle>Ссылки</SectionTitle>
+            <LinkList>
+              <LinkItem>
+                <img src={iconTelegram} alt="Иконка телеграм"></img>
+                <a href="#сommunity">Сообщество в Телеграм</a>
+              </LinkItem>
+              <LinkItem>
+                <img src={iconRobot} alt="Иконка бота"></img>
+                <a href="#bot">Телеграм бот</a>
+              </LinkItem>
+              <LinkItem>
+                <img src={iconEmail} alt="Иконка почты"></img>
+                <a href="#email">email@bothub.chat</a>
+              </LinkItem>
+            </LinkList>
+          </Section>
+          <Section>
+            <SectionTitle>Блог</SectionTitle>
+            <LinkList>
+              <LinkItem>
+                <img src={iconBlog} alt="Иконка блога"></img>
+                <a href="#blog">Наш блог</a>
+              </LinkItem>
+              <LinkItem>
+                <img src={iconHabr} alt="Иконка habr"></img>
+                <a href="#habr">Habr</a>
+              </LinkItem>
+              <LinkItem>
+                <img src={iconTelegram} alt="Иконка телеграм"></img>
+                <a href="#telegram">Телеграм</a>
+              </LinkItem>
+            </LinkList>
+          </Section>
+        </SectionInfo>
       </Container>
     </FooterContainer>
   );

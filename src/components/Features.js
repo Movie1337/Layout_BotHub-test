@@ -31,6 +31,15 @@ const Card = styled.div`
   width: 370px;
   height: 260px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 834px) {
+    width: 315px;
+  }
+
+  @media (max-width: 375px) {
+    width: 343px;
+    text-align: center;
+  }
 `;
 
 const CardTitle = styled.h3`
@@ -41,6 +50,15 @@ const CardTitle = styled.h3`
 const CardDescription = styled.p`
   font-size: 16px;
   color: #c0c0c0;
+
+  @media (max-width: 375px) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+
+    text-align: center;
+  }
 `;
 
 const ImageTextContainer = styled.div`
@@ -49,15 +67,34 @@ const ImageTextContainer = styled.div`
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 120px;
-`;
 
-const Image = styled.img`
-  width: 300px;
-  border-radius: 8px;
+  img {
+    width: 630px;
+
+    @media (max-width: 834px) {
+      width: 330px;
+    }
+  }
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 375px) {
+    width: 343px;
+    text-align: center;
+  }
 `;
 
 const TextContainer = styled.div`
   max-width: 500px;
+
+  @media (max-width: 834px) {
+    max-width: 100%;
+    text-align: center;
+  }
 `;
 
 const ImageTitle = styled.h3`
@@ -66,6 +103,11 @@ const ImageTitle = styled.h3`
   line-height: 44px;
   text-align: left;
   margin-bottom: 20px;
+
+  @media (max-width: 834px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const ImageDescription = styled.p`
@@ -74,6 +116,11 @@ const ImageDescription = styled.p`
   line-height: 22px;
   text-align: left;
   margin-bottom: 20px;
+
+  @media (max-width: 834px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const ImageButton = styled.button`
@@ -84,6 +131,10 @@ const ImageButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  @media (max-width: 834px) {
+    width: 240px;
+  }
 
   &:hover {
     background-color: #0056e0;

@@ -19,10 +19,21 @@ const Background = styled.div`
 
 const MainContainer = styled.div`
   text-align: left;
-  margin-top: 135.5px;
   width: 450px;
   margin-right: auto;
   z-index: 1;
+
+  @media (max-width: 834px) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: 375px) {
+    width: 343px;
+    text-align: center;
+    margin-bottom: 38px;
+  }
 `;
 
 const Title = styled.h1`
@@ -37,7 +48,8 @@ const Description = styled.p`
   color: #c0c0c0;
 `;
 
-const StartButton = styled.button`
+const StartButton = styled.a`
+  display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   color: white;
@@ -45,6 +57,8 @@ const StartButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1;
+  text-decoration: none;
 
   &:hover {
     background-color: #0056e0;
@@ -55,11 +69,11 @@ const MainContent = () => (
   <MainContainer>
     <Title>ChatGPT: ваш умный помощник</Title>
     <Description>
-      Эксперементируйте с ChatGPT-4, Midjourney и Claude в одном месте. Без VPN
+      Экспериментируйте с ChatGPT-4, Midjourney и Claude в одном месте. Без VPN
       и абонентской платы. Создавайте контент, обрабатывайте данные и получайте
       ответы на вопросы через удобный интерфейс!
     </Description>
-    <StartButton>Начать работу</StartButton>
+    <StartButton href="#">Начать работу</StartButton>
     <Background>
       <img src={BackgroundGrid} alt="Задний фон"></img>
     </Background>
