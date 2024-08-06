@@ -27,7 +27,7 @@ const Container = styled.div`
     width: 754px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     width: 343px;
   }
 `;
@@ -124,7 +124,7 @@ const DropdownMenu = styled.div`
     height: auto;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     position: relative;
     background-color: #2a2f4a;
     box-shadow: none;
@@ -220,7 +220,7 @@ const AuthButton = styled.button`
     margin-right: 35px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     display: none;
   }
 `;
@@ -229,7 +229,7 @@ const MobileAuthButton = styled(AuthButton)`
   display: none;
   margin-top: 15px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     display: block;
   }
 `;

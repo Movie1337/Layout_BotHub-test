@@ -36,7 +36,7 @@ const Card = styled.div`
     width: 315px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     width: 343px;
     text-align: center;
   }
@@ -51,7 +51,7 @@ const CardDescription = styled.p`
   font-size: 16px;
   color: #c0c0c0;
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -82,7 +82,7 @@ const ImageTextContainer = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     width: 343px;
     text-align: center;
   }

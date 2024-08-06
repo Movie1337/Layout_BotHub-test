@@ -20,7 +20,7 @@ const ChatContainer = styled.div`
     margin-bottom: 75px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     width: 343px;
     margin-bottom: 64px;
   }

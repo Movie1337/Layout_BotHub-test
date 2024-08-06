@@ -29,7 +29,7 @@ const MainContainer = styled.div`
     margin-bottom: 45px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     width: 343px;
     text-align: center;
     margin-bottom: 38px;

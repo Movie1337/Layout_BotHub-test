@@ -28,7 +28,7 @@ const Container = styled.div`
     padding: 56px 40px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     padding: 44px 16px;
   }
 `;
@@ -38,7 +38,7 @@ const SectionInfo = styled.div`
   justify-content: space-between;
   gap: 24px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 430px) {
     flex-direction: column;
   }
 `;
